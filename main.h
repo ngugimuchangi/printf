@@ -8,7 +8,8 @@ int _putchar(char c);
  * @f: function pointer to function that prints the relevant data type
  */
 
-typedef struct spec {
+typedef struct spec
+{
 	char *sp;
 	char (*f)(va_list);
 } spec_t;

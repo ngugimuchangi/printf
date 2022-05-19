@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_c - Invoked by specifier "s" to print string
+ * print_s - Invoked by specifier "s" to print string
  * @ap: va_list type
  * Return: length of string
  */
