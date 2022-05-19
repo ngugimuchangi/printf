@@ -1,14 +1,14 @@
 #include "main.h"
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
 #include <string.h>
 
 /**
  * _printf - function that produces output according to format
- * @formart: contains conversion specifiers like "c","s","%"
+ * @format: contains conversion specifiers like "c","s","%"
  * Return: Numbers of characters printed
  */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	int counter, j, k;
 	va_list aps;
@@ -20,8 +20,8 @@ int _printf(const char *format, ...);
 	};
 	counter = 0;
 	tr = "%";
-	va_start(ap, format);
-	for (j = 0; format[j] != '\0';)
+	va_start(aps, format);
+	for (j = 0; format[j] != '\0'; )
 	{
 		if (strcmp(format[j], tr) == 0)
 		{
@@ -30,16 +30,20 @@ int _printf(const char *format, ...);
 			{
 				if (strcmp((format + j), specs[k].sp) == 0)
 				{
+					specs[k].f(aps);
 					counter += specs[k].f(aps);
 					break;
 				}
 			}
+			j++;
 			continue;
 		}
+		else
+		{
 		_putchar(format[j]);
 		counter++;
 		j++;
+		}
 	}
 	return (counter);
-
 }

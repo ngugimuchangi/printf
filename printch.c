@@ -6,7 +6,7 @@
  * @ap: va_list type
  * Return: length of character printed (1);
  */
-int print_c(va_list ap);
+int print_c(va_list ap)
 {
 	char ch;
 
