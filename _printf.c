@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _printf - function that produces output according to format
@@ -8,40 +7,37 @@
  */
 int _printf(const char *format, ...)
 {
-	int counter, j, k;
+	int counter = 0, i, j;
 	va_list aps;
 
 	spec_t specs[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_perc}
+		{NULL, NULL}
 	};
-	if (format == NULL)
-	{
-		return (-1);
-	}
-	if (format[0] == '%' && format[1] == '\0')
-	{
-		return (-1);
-	}
-	counter = 0;
 	va_start(aps, format);
-	for (j = 0; format[j] != '\0'; j++)
+	for (j = 0; format &&  format[j] != '\0'; j++)
 	{
-		if (format[j] != '%')
+	if (format[j] != '%')
+	{
+		counter += _putchar(format[j]);
+		continue;
+	}
+	j++;
+
+	for (i = 0; specs[i].sp != NULL; i++)
+	{
+		if (format[j] == *(specs[i].sp))
 		{
-			counter += _putchar(format[j]);
-			continue;
+			counter += specs[i].f(ap);
+			break;
 		}
-		j++;
-		for (k = 0; k < 3; k++)
-		{
-			if (format[j] == *(specs[k].sp))
-			{
-				counter += specs[k].f(aps);
-				break;
-			}
-		}
+	}
+	if (op[i].sp == NULL)
+	{
+		if (format[j] == '%')
+			counter += _putchar (format[j]);
+	}
 	}
 	va_end(aps);
 	return (counter);
