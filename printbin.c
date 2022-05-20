@@ -6,13 +6,11 @@
  */
 int print_b(va_list ap)
 {
-	int i;
-	long result = 0;
+	unsigned int i;
+	unsigned int result = 0;
 	int rem, nth = 1;
 
 	i = va_arg(ap, unsigned int);
-	if (i < 0)
-		i *= -1;
 	while (i != 0)
 	{
 		rem = i % 2;
