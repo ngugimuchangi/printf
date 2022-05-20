@@ -14,12 +14,11 @@ int _printf(const char *format, ...)
 	spec_t specs[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_perc},
-		{NULL, NULL}
+		{"%", print_perc}
 	};
 	counter = 0;
 	va_start(aps, format);
-	for (j = 0; format && format[j] != '\0'; j++)
+	for (j = 0; format[j] != '\0'; j++)
 	{
 		if (format[j] != '%')
 		{
@@ -27,7 +26,7 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		j++;
-		for (k = 0; specs[k].sp != NULL; k++)
+		for (k = 0; k < 3; k++)
 		{
 			if (format[j] == *(specs[k].sp))
 			{
