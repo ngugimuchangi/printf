@@ -21,6 +21,7 @@ int print_c(va_list ap);
 int print_s(va_list ap);
 int print_i(va_list ap);
 int print_b(va_list ap);
+int print_b2(unsigned int n, int counter);
 int print_ui(va_list ap);
 int print_oct(va_list ap);
 int print_hex(va_list ap);
