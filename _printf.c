@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 		j++;
 		}
 	}
-	_putchar('n');
+	_putchar('\n');
 	va_end(aps);
 	return (counter);
 }
