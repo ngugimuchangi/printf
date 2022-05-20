@@ -15,6 +15,7 @@ typedef struct spec
 	char *sp;
 	int (*f)(va_list);
 } spec_t;
+int _vprintf(spec_t op[], const char *format, va_list aps);
 int _printf(const char *format, ...);
 int print_c(va_list ap);
 int print_s(va_list ap);
