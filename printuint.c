@@ -6,8 +6,10 @@
  */
 int print_ui(va_list ap)
 {
-	unsigned int i;
+	int i;
 
-	i = va_arg(ap, unsigned int);
-	return (_putint((int)i));
+	i = va_arg(ap, int);
+	if (i < 0)
+		i *= -1;
+	return (_putint(i));
 }
