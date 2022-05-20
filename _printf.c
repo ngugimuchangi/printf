@@ -46,6 +46,5 @@ int _printf(const char *format, ...)
 		j++;
 		}
 	}
-	_putchar('\n');
 	return (counter);
 }
