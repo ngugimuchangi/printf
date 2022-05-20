@@ -4,10 +4,10 @@
  * @i: integer to print
  * Return: number of characters printed
  */
-int print_i(va_list i)
+int print_i(va_list ap)
 {
 	int a;
 
-	a = va_arg(i, int);
+	a = va_arg(ap, int);
 	return (_putint(a));
 }
