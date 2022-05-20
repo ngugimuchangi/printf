@@ -6,15 +6,17 @@
  */
 int print_s(va_list ap)
 {
-	int i, j;
+	int i;
 	char *str;
 
 	str = va_arg(ap, char *);
 	i = 0;
 	j = 0;
-	while (str[i] != '\0' && str)
+	if (str == NULL)
+		str = "(nil)";
+	while (str[i] != '\0')
 	{
-		j += _putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
 	return (j);
