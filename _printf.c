@@ -20,6 +20,10 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+	if (format[0] == '%' && format[1] == '\0')
+	{
+		return (-1);
+	}
 	counter = 0;
 	va_start(aps, format);
 	for (j = 0; format[j] != '\0'; j++)
