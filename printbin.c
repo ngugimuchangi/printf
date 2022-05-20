@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * p_binary - prints unsigned int as binary
- * @b: int to print
+ * print_b - prints unsigned int as binary
+ * @ap: int to print
  * Return: number of binary characters printed
  */
 int print_b(va_list ap)
