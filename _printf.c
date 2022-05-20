@@ -12,18 +12,19 @@ int _printf(const char *format, ...)
 {
 	int counter, j, k;
 	va_list aps;
-	char tr;
+	char tr[] = "%";
+	char *ptr;
 
 	spec_t specs[] = {
-		{"c", "print_c"},
-		{"s", "print_s"}
+		{"c", print_c},
+		{"s", print_s}
 	};
+	ptr = tr;
 	counter = 0;
-	tr = "%";
 	va_start(aps, format);
 	for (j = 0; format[j] != '\0'; )
 	{
-		if (strcmp(format[j], tr) == 0)
+		if (strcmp(format + j, ptr) == 0)
 		{
 			j++;
 			for (k = 0; k < 2; k++)
