@@ -1,2 +1,5 @@
-# printf
-ALX SE printf project
+# Printf
+## ALX SE Printf project
+Contributors:
+> * Duncan Ngugi
+> * Seth Gechuki
