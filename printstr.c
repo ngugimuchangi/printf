@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdarg.h>
-
 /**
  * print_s - Invoked by specifier "s" to print string
  * @ap: va_list type
