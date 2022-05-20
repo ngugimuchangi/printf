@@ -37,5 +37,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(aps);
+	_putchar('\n');
 	return (counter);
 }
