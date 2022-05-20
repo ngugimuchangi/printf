@@ -10,9 +10,9 @@ int print_s(va_list ap)
 	char *str;
 
 	str = va_arg(ap, char *);
-	i = 0;
-	if (str == NULL)
+	if (!str)
 		str = "(nil)";
+	i = 0;
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
