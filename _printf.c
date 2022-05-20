@@ -10,18 +10,9 @@ int _printf(const char *format, ...)
 	int counter = 0, i, j;
 	va_list aps;
 
-	spec_t specs[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"d", print_i},
-		{"i", print_i},
-		{"b", print_b},
-		{"u", print_ui},
-		{"o", print_oct},
-		{"x", print_hex},
-		{"X", print_Hex},
-		{NULL, NULL}
-	};
+	spec_t specs[] = {{"c", print_c}, {"s", print_s}, {"d", print_i},
+		{"i", print_i}, {"b", print_b}, {"u", print_ui}, {"o", print_oct},
+		{"x", print_hex}, {"X", print_Hex}, {NULL, NULL}};
 	va_start(aps, format);
 	for (j = 0; format &&  format[j] != '\0'; j++)
 	{
