@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 
 /**
  * _printf - function that produces output according to format
@@ -15,6 +14,7 @@ int _printf(const char *format, ...)
 	spec_t specs[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"%", print_perc},
 		{NULL, NULL}
 	};
 	counter = 0;
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		j++;
 		for (k = 0; specs[k].sp != NULL; k++)
 		{
-			if (strcmp((format + j), specs[k].sp) == 0)
+			if (format[j] == *(specs[k].sp))
 			{
 				counter += specs[k].f(aps);
 				break;
