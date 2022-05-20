@@ -16,6 +16,10 @@ int _printf(const char *format, ...)
 		{"s", print_s},
 		{"%", print_perc}
 	};
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	counter = 0;
 	va_start(aps, format);
 	for (j = 0; format[j] != '\0'; j++)
