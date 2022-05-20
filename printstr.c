@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdarg.h>
-
 /**
  * print_s - Invoked by specifier "s" to print string
  * @ap: va_list type
@@ -14,7 +12,7 @@ int print_s(va_list ap)
 
 	str = va_arg(ap, char *);
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i] != '\0' && str != NULL)
 	{
 		_putchar(str[i]);
 		i++;
