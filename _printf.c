@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdarg.h>
 #include <string.h>
 
 /**
@@ -12,39 +11,31 @@ int _printf(const char *format, ...)
 {
 	int counter, j, k;
 	va_list aps;
-	char tr[] = "%";
-	char *ptr;
 
 	spec_t specs[] = {
 		{"c", print_c},
-		{"s", print_s}
+		{"s", print_s},
+		{NULL, NULL}
 	};
-	ptr = tr;
 	counter = 0;
 	va_start(aps, format);
-	for (j = 0; format[j] != '\0'; )
+	for (j = 0; format && format[j] != '\0'; j++)
 	{
-		if (strcmp(format + j, ptr) == 0)
+		if (format[j] != '%')
 		{
-			j++;
-			for (k = 0; k < 2; k++)
-			{
-				if (strcmp((format + j), specs[k].sp) == 0)
-				{
-					specs[k].f(aps);
-					counter += specs[k].f(aps);
-					break;
-				}
-			}
-			j++;
+			counter += _putchar(format[j]);
 			continue;
 		}
-		else
-		{
-		_putchar(format[j]);
-		counter++;
 		j++;
+		for (k = 0; specs[k].sp != NULL; k++)
+		{
+			if (strcmp((format + j), specs[k].sp) == 0)
+			{
+				counter += specs[k].f(aps);
+				break;
+			}
 		}
 	}
+	va_end(aps);
 	return (counter);
 }
