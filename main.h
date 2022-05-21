@@ -3,8 +3,6 @@
 
 #include <stdarg.h>
 
-int _putchar(char c);
-int _putint(int n);
 /**
  * struct spec - A new struct type holding specifier and its conversion printer
  * @sp: conversion specifier
@@ -15,8 +13,12 @@ typedef struct spec
 	char *sp;
 	int (*f)(va_list);
 } spec_t;
-int _vprintf(spec_t op[], const char *format, va_list aps);
+
+/* function prototypes */
+int _putchar(char c);
+int _putint(int n);
 int _printf(const char *format, ...);
+int _vprintf(spec_t op[], const char *format, va_list aps);
 int print_c(va_list ap);
 int print_s(va_list ap);
 int print_i(va_list ap);
