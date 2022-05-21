@@ -6,8 +6,14 @@
  */
 int print_i(va_list ap)
 {
-	int a;
+	int i, j = 0;
 
-	a = va_arg(ap, int);
-	return (_putint(a));
+	i = va_arg(ap, int);
+	if (i < 0)
+	{
+		j += _putchar('_');
+		i *= -1;
+	}
+	j += p_conv(i, 10, 1);
+	return (j);
 }

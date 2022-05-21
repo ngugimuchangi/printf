@@ -16,7 +16,6 @@ typedef struct spec
 
 /* function prototypes */
 int _putchar(char c);
-int _putint(int n);
 int _printf(const char *format, ...);
 int _vprintf(spec_t op[], const char *format, va_list aps);
 int print_c(va_list ap);

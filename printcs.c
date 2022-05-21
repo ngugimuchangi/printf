@@ -3,7 +3,7 @@
 /**
  * print_cs - print string while non printable
  * printed this way: \x,
- * followed by the ASCII code value in hexadecimal 
+ * followed by the ASCII code value in hexadecimal
  * @ap: list of variable arguments
  * Return: size of string printed
  */
