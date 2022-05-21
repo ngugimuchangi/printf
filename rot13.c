@@ -11,7 +11,6 @@ int conv_rot13(va_list ap)
 	char *str;
 
 	str = va_arg(ap, char *);
-	if (!str)
 	while (str[i])
 	{
 		if (str[i] >= 65 && str[i] <= 90)
