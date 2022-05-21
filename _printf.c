@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		counter = -1;
+	else if (format == "")
+		counter == 0;
 	else
 		counter = _vprintf(specs, format, aps);
 	va_end(aps);
