@@ -9,5 +9,5 @@ int print_ui(va_list ap)
 	unsigned int i;
 
 	i = va_arg(ap, unsigned int);
-	return (_putint(i));
+	return (p_conv(i, 10, 1));
 }

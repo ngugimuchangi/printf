@@ -20,10 +20,11 @@ int _printf(const char *format, ...);
 int print_c(va_list ap);
 int print_s(va_list ap);
 int print_i(va_list ap);
+int p_conv(unsigned int i, unsigned int base, int l);
 int print_b(va_list ap);
-int print_b2(unsigned int n, int counter);
 int print_ui(va_list ap);
 int print_oct(va_list ap);
+int p_hex(unsigned int i, unsigned int base, int c, int l);
 int print_hex(va_list ap);
 int print_Hex(va_list ap);
 
