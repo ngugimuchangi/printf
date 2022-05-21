@@ -29,6 +29,8 @@ int p_hex(unsigned int i, unsigned int base, int c, int l);
 int print_hex(va_list ap);
 int print_Hex(va_list ap);
 int print_cs(va_list ap);
+int print_ptr(va_list ap);
+int p_addr(unsigned long i, unsigned int base, int c, int l);
 int conv_rot13(va_list ap);
 int _rev(va_list ap);
 
