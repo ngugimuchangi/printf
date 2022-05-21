@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 	};
 	va_start(aps, format);
 
-	if (!format || *format == '\0')
+	if (!format)
 		counter = -1;
 	else
 		counter = _vprintf(specs, format, aps);

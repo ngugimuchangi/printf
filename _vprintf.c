@@ -11,7 +11,7 @@ int _vprintf(spec_t op[], const char *format, va_list aps)
 {
 	int counter = 0, i;
 
-	for (; *format && format; format++)
+	for (; *format != '\0'; format++)
 	{
 		if (*format != '%')
 		{
@@ -31,7 +31,9 @@ int _vprintf(spec_t op[], const char *format, va_list aps)
 		{
 			if (*format == '%')
 				counter += _putchar (*format);
-			if (*format == ' ' || *format == '\0')
+			if (*format != '\0' && *format != '%')
+				counter += _putchar (*(--format));
+			if (*format == '\0')
 			{
 				counter = -1;
 				break;
