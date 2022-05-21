@@ -10,7 +10,7 @@
 int p_addr(unsigned long i, unsigned int base, int c, int l)
 {
 	if (i / base)
-		l = p_hex(i / base, base, c, ++l);
+		l = p_addr(i / base, base, c, ++l);
 	if (i % base < 10)
 		_putchar(i % base + '0');
 	else
