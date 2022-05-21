@@ -17,16 +17,24 @@ int conv_rot13(va_list ap)
 		if (str[i] >= 65 && str[i] <= 90)
 		{
 			if (str[i] < 78)
+			{
 				len += _putchar(str[i] + 13);
-				continue;
-			len += _putchar(str[i] - 13);
+			}
+			else
+			{
+				len += _putchar(str[i] - 13);
+			}
 		}
 		else if (str[i] >= 97 && str[i] <= 122)
 		{
 			if (str[i] < 110)
+			{
 				len += _putchar(str[i] + 13);
-				continue;
-			len += _putchar(str[i] - 13);
+			}
+			else
+			{
+				len += _putchar(str[i] - 13);
+			}
 		}
 		else
 		{
