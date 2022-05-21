@@ -31,8 +31,18 @@ int print_ptr(va_list ap)
 
 	addr = va_arg(ap, unsigned long);
 	if (addr == 0)
-		return (-1);
+	{
+		counter += _putchar('(');
+		counter += _putchar('n');
+		counter += _putchar('i');
+		counter += _putchar('l');
+		counter += _putchar(')');
+	}
+	else
+	{
 	counter += _putchar('0');
 	counter += _putchar('x');
-	return (counter += p_addr(addr, 16, 87, 1));
+	counter += p_addr(addr, 16, 87, 1);
+	}
+	return (counter);
 }
