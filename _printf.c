@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"X", print_Hex},
 		{"S", print_cs},
 		{"R", conv_rot13},
+		{"r", _rev},
 		{NULL, NULL}
 	};
 	va_start(aps, format);

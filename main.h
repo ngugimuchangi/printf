@@ -31,5 +31,6 @@ int print_hex(va_list ap);
 int print_Hex(va_list ap);
 int print_cs(va_list ap);
 int conv_rot13(va_list ap);
+int _rev(va_list ap);
 
 #endif
