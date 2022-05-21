@@ -7,16 +7,10 @@
  */
 int conv_rot13(va_list ap)
 {
-	int i, len;
+	int i = 0, len = 0;
 	char *str;
 
 	str = va_arg(ap, char *);
-	i = 0;
-	len = 0;
-	if (!str)
-	{
-		str = "(null)";
-	}
 	while (str[i])
 	{
 		if (str[i] >= 65 && str[i] <= 90)
