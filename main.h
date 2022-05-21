@@ -30,5 +30,6 @@ int p_hex(unsigned int i, unsigned int base, int c, int l);
 int print_hex(va_list ap);
 int print_Hex(va_list ap);
 int print_cs(va_list ap);
+int conv_rot13(va_list ap);
 
 #endif
