@@ -13,6 +13,10 @@ int conv_rot13(va_list ap)
 	str = va_arg(ap, char *);
 	i = 0;
 	len = 0;
+	if (!str)
+	{
+		str = "(null)"
+	}
 	while (str[i])
 	{
 		if (str[i] >= 65 && str[i] < 78)
