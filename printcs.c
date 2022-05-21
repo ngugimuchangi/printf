@@ -21,7 +21,7 @@ int print_cs(va_list ap)
 		}
 		else
 		{
-		len += _putchar(47);
+		len += _putchar(92);
 		len += _putchar('x');
 		len += p_hex(str[i], 16, 55, 1);
 		}
