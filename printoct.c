@@ -8,7 +8,7 @@ int print_oct(va_list ap)
 
 {
 	unsigned int i;
-	int result = 0, rem, nth = 1;
+	unsigned int result = 0, rem, nth = 1;
 
 	i = va_arg(ap, unsigned int);
 	while (i != 0)
@@ -18,5 +18,5 @@ int print_oct(va_list ap)
 		result += rem * nth;
 		nth *= 10;
 	}
-	return (_putint((int)result));
+	return (_putint(result));
 }
