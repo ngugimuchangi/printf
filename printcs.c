@@ -13,17 +13,21 @@ int print_cs(va_list ap)
 	char *str;
 
 	str = va_arg(ap, char *);
-	while (!str[i])
+	if (!str)
+		str = "(null)";
+	while (str[i] != '\0')
 	{
-		if (str[i] > 32 && str[i] < 127)
+		if (str[i] < 32 || str[i] >= 127)
 		{
-			len += _putchar(str[i]);
+			len += _putchar(92);
+			len += _putchar('x');
+			if (str[i] < 16)
+				len += _putchar('0');
+			len += p_hex(str[i], 16, 55, 1);
 		}
 		else
 		{
-		len += _putchar(92);
-		len += _putchar('x');
-		len += p_hex(str[i], 16, 55, 1);
+			len += _putchar(str[i]);
 		}
 		i++;
 	}
