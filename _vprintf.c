@@ -31,6 +31,12 @@ int _vprintf(spec_t op[], const char *format, va_list aps)
 		{
 			if (*format == '%')
 				counter += _putchar (*format);
+			if (*format == ' ' || *format == '\0')
+			{
+				counter = -1;
+				break;
+			}
+
 		}
 	}
 	return (counter);

@@ -24,7 +24,10 @@ int _printf(const char *format, ...)
 	};
 	va_start(aps, format);
 
-	counter = _vprintf(specs, format, aps);
+	if (!format)
+		counter = -1;
+	else
+		counter = _vprintf(specs, format, aps);
 	va_end(aps);
 	return (counter);
 }
