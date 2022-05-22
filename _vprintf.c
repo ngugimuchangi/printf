@@ -6,7 +6,7 @@
  * @format: format string;
  * @aps: list of arguments
  * Description: the functions checks for format specifiers
- * flags, length mdofiers, width and precision and calls 
+ * flags, length mdofiers, width and precision and calls
  * the right functions.
  * Return: Numbers of characters printed
  */
