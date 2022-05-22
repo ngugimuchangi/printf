@@ -18,6 +18,8 @@ typedef struct spec
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _vprintf(spec_t op[], const char *format, va_list aps);
+spec_t selfunc(spec_t op[], char sp);
+int flags(char c, spec_t func[]);
 int print_c(va_list ap);
 int print_s(va_list ap);
 int print_i(va_list ap);
