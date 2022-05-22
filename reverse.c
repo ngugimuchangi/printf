@@ -7,17 +7,15 @@
  */
 int _rev(va_list ap)
 {
-	int len, i, j;
+	int len = 0, i = 0, j;
 	char *str;
 
 	str = va_arg(ap, char *);
-	len = 0;
 	while (str[len])
 	{
 		len++;
 	}
 	j = (len - 1);
-	i = 0;
 	for ( ; j >= 0; j--)
 	{
 		i += _putchar(str[j]);
