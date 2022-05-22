@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * conv_rot13 - encodes string to rot13
+ * conv_rot13 - Offsets alphabetical letters by 13 places
  * @ap: list of variable arguments
  * Return: number of characters printed
  */
