@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * selfunc - selects function to used based on specifier
+ * selfunc - selects function to use based on specifier
  * @op: struct to check for specifier
  * @sp: format specifier
  * Return: The name of the function.
